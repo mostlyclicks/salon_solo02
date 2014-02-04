@@ -24,9 +24,17 @@
                 :object => "promos/promo" -%>
   </div>
 
+  <!-- <div class='field'>
+    <%#= f.label :promo_status -%>
+    <%#= f.text_field :promo_status -%>
+  </div> -->
+
   <div class='field'>
     <%= f.label :promo_status -%>
-    <%= f.text_field :promo_status -%>
+    <%#= f.text_field :project_status  -%>
+    <%= f.select :promo_status, options_for_select([["Active", 1], ["Not Active", 2]],
+                                                    :selected => @promo.promo_status) -%>
+
   </div>
 
   <div class='field'>

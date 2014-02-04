@@ -1,6 +1,61 @@
-<%= raw @page.content_for(:body) %>
-<%= raw @page.content_for(:hours) %>
-<%= raw @page.content_for(:map) %>
+<style>
+  .blue-brdr {border:1px solid blue;}
+  .red-brdr {border:1px solid red;}
+  .green-brdr {border:1px solid blue;}
+</style>
+
+
+<div class="row blue-brdr" id="header">
+  <div class="container red-brdr">
+    <div class="row">
+      <div class="col-md-12"><%= raw @page.content_for(:body) %></div>
+    </div>
+  </div>
+</div>
+
+<div class="row green-brdr" id="promo">
+<% @promos.each do |p| %>
+  <%= p.title %>
+<% end %>
+</div>
+
+<div class="row blue-brdr" id="services">
+  <div class="container">
+    <div class="row">
+    <% @services.each do |s| %>
+    <div class="col-md-4 col-xs-1">
+      <h3><%= s.title %></h3> 
+      <p><%= raw s.service_excerpt %></p>
+    </div>
+    <% end %>
+  </div>
+</div>
+
+<div class="row red-brdr" id="products">
+  <div class="container">
+  <div class="row">  
+    <% @products.each do |p| %>
+      <div class="col-md-4 col-xs-1">
+        <%= p.title %>
+      </div>  
+    <% end %>
+  </div>
+<div class="row" id="hours-map" style="border:1px solid blue;">
+  <div class="container">
+    <div class="row" style="border:1px solid red">
+      <div class="col-md-6 col-sm-6 col-xs-12">
+        <%= raw @page.content_for(:hours) %>
+      </div>
+      <div class="col-md-6 col-sm-6 col-xs-12">
+        <%= raw @page.content_for(:map) %>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
 
 <!-- 
 <div id="hero-image">
