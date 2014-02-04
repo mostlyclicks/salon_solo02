@@ -1,0 +1,10 @@
+# Promos extension for Refinery CMS.
+
+## How to build this extension as a gem
+
+    cd vendor/extensions/promos
+    gem build refinerycms-promos.gemspec
+    gem install refinerycms-promos.gem
+
+    # Sign up for a http://rubygems.org/ account and publish the gem
+    gem push refinerycms-promos.gem

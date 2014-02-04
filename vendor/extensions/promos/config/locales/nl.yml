@@ -1,0 +1,33 @@
+nl:
+  refinery:
+    plugins:
+      promos:
+        title: Promos
+    promos:
+      admin:
+        promos:
+          actions:
+            create_new: Nieuwe Promo toevoegen
+            reorder: De volgorde van de Promos wijzigen
+            reorder_done: Klaar met het wijzingen van de van de Promo-volgorde
+          records:
+            title: Promos
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Promos. Druk op 'Nieuwe Promo toevoegen' om de eerste toe te voegen.
+          promo:
+            view_live_html: Deze promo op de website bekijken <br/><em>(opent in een nieuw venster)</em>
+            edit: Bewerk deze promo
+            delete: Deze promo definitief verwijderen
+      promos:
+        show:
+          other: Andere Promos
+  activerecord:
+    attributes:
+      'refinery/promos/promo':
+        title: Title
+        promo_image: Promo Image
+        description: Description
+        promo_status: Promo Status
+        promo_pdf: Promo Pdf
+        start_date: Start Date
+        end_date: End Date

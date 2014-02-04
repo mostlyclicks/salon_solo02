@@ -1,0 +1,34 @@
+es:
+  refinery:
+    plugins:
+      promos:
+        title: Promos
+#        article: masculino/femenino
+    promos:
+      admin:
+        promos:
+          actions:
+            create_new: Crear nuevo promo
+            reorder: Reordenar promos
+            reorder_done: Reordenación de promos completada
+          records:
+            title: Promos
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay promos todavía. Pulsa en "Crear nuevo Promo" para crear tu primer promo.
+          promo:
+            view_live_html: Ver este promo como abierto al público <br/><em>(abre en ventana nueva)</em>
+            edit: Editar este promo
+            delete: Borrar este promo para siempre
+      promos:
+        show:
+          other: Otros promos
+  activerecord:
+    attributes:
+      'refinery/promos/promo':
+        title: Title
+        promo_image: Promo Image
+        description: Description
+        promo_status: Promo Status
+        promo_pdf: Promo Pdf
+        start_date: Start Date
+        end_date: End Date

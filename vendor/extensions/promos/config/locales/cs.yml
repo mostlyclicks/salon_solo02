@@ -1,0 +1,33 @@
+cs:
+  refinery:
+    plugins:
+      promos:
+        title: Promos
+    promos:
+      admin:
+        promos:
+          actions:
+            create_new: Přidat Promo
+            reorder: Řadit Promos
+            reorder_done: Konec řazení Promos
+          records:
+            title: Promos
+            sorry_no_results: Litujeme, ale nebyly nalezny žádné výsledky.
+            no_items_yet: Zatím nebyly vytvořeny žádné Promos. Zvolte "Přidat Promo" pro přidání prvního promo.
+          promo:
+            view_live_html: Zobrazit náhled promo<br/><em>(otevře se v novém okně)</em>
+            edit: Upravit promo
+            delete: Smazat promo
+      promos:
+        show:
+          other: Další Promos
+  activerecord:
+    attributes:
+      'refinery/promos/promo':
+        title: Title
+        promo_image: Promo Image
+        description: Description
+        promo_status: Promo Status
+        promo_pdf: Promo Pdf
+        start_date: Start Date
+        end_date: End Date

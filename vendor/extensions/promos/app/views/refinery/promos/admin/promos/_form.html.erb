@@ -1,0 +1,62 @@
+<%= form_for [refinery, :promos_admin, @promo] do |f| -%>
+  <%= render '/refinery/admin/error_messages',
+              :object => @promo,
+              :include_object_name => true %>
+
+  <div class='field'>
+    <%= f.label :title -%>
+    <%= f.text_field :title, :class => 'larger widest' -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :promo_image -%>
+    <%= render '/refinery/admin/image_picker',
+               :f => f,
+               :field => :promo_image_id,
+               :image => @promo.promo_image,
+               :toggle_image_display => false -%>
+  </div>
+
+  <div class='field'>
+    <%= render '/refinery/admin/wysiwyg',
+                :f => f,
+                :fields => [:description],
+                :object => "promos/promo" -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :promo_status -%>
+    <%= f.text_field :promo_status -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :promo_pdf -%>
+    <%= render '/refinery/admin/resource_picker',
+               :f => f,
+               :field => :promo_pdf_id,
+               :resource => @promo.promo_pdf -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :start_date -%>
+    <%= f.date_select :start_date -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :end_date -%>
+    <%= f.date_select :end_date -%>
+  </div>
+
+  <%= render '/refinery/admin/form_actions', :f => f,
+             :continue_editing => false,
+             :delete_title => t('delete', :scope => 'refinery.promos.admin.promos.promo'),
+             :delete_confirmation => t('message', :scope => 'refinery.admin.delete', :title => @promo.title) -%>
+<% end -%>
+
+<% content_for :javascripts do -%>
+  <script>
+    $(document).ready(function(){
+      page_options.init(false, '', '');
+    });
+  </script>
+<% end -%>

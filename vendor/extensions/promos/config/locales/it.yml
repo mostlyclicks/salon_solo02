@@ -1,0 +1,33 @@
+it:
+  refinery:
+    plugins:
+      promos:
+        title: Promos
+    promos:
+      admin:
+        promos:
+          actions:
+            create_new: Aggiungi Nuovo Promo
+            reorder: Riordina Promos
+            reorder_done: Termina il Riordino di Promos
+          records:
+            title: Promos
+            sorry_no_results: "Spiacenti! Nessun risultato trovato"
+            no_items_yet: Non ci sono ancora Promos. Clicca "Aggiungi Nuovo Promo" per aggiungere il tuo primo promo.
+          promo:
+            view_live_html: Guarda live questo promo <br/><em>(apre una nuova finestra)</em>
+            edit: Modifica questo promo
+            delete: Rimuovi per sempre questo promo
+      promos:
+        show:
+          other: Altri Promos
+  activerecord:
+    attributes:
+      'refinery/promos/promo':
+        title: Title
+        promo_image: Promo Image
+        description: Description
+        promo_status: Promo Status
+        promo_pdf: Promo Pdf
+        start_date: Start Date
+        end_date: End Date

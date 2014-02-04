@@ -1,0 +1,11 @@
+<% content_for :body do %>
+  <ul id="promos">
+    <% @promos.each do |promo| %>
+      <li>
+        <%= link_to promo.title, refinery.promos_promo_path(promo) %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= render '/refinery/content_page' %>

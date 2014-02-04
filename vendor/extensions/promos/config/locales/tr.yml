@@ -1,0 +1,33 @@
+tr:
+  refinery:
+    plugins:
+      promos:
+        title: Promos
+    promos:
+      admin:
+        promos:
+          actions:
+            create_new: Yeni Ekle Promo
+            reorder: Tekrar sirala Promos
+            reorder_done: Tekrar siralama tamamlandiPromos
+          records:
+            title: Promos
+            sorry_no_results: Uzgunum! Herhangi bir sonuc bulunamadi.
+            no_items_yet: Herhangi bir Promos yok henuz.  Tikla "Yeni Ekle Promo" eklemek senin ilk promo.
+          promo:
+            view_live_html: Bunu canlu promo goruntule <br/><em>(yeni bir pencerede acar)</em>
+            edit: Bunu Duzenle promo
+            delete: Bunu Sil promo sonsuza dek
+      promos:
+        show:
+          other: Diger Promos
+  activerecord:
+    attributes:
+      'refinery/promos/promo':
+        title: Title
+        promo_image: Promo Image
+        description: Description
+        promo_status: Promo Status
+        promo_pdf: Promo Pdf
+        start_date: Start Date
+        end_date: End Date

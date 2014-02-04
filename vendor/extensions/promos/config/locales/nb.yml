@@ -1,0 +1,33 @@
+nb:
+  refinery:
+    plugins:
+      promos:
+        title: Promos
+    promos:
+      admin:
+        promos:
+          actions:
+            create_new: Lag en ny Promo
+            reorder: Endre rekkefølgen på Promos
+            reorder_done: Ferdig å endre rekkefølgen Promos
+          records:
+            title: Promos
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Promos enda. Klikk på "Lag en ny Promo" for å legge til din første promo.
+          promo:
+            view_live_html: Vis hvordan denne promo ser ut offentlig <br/><em>(åpner i et nytt vindu)</em>
+            edit: Rediger denne promo
+            delete: Fjern denne promo permanent
+      promos:
+        show:
+          other: Andre Promos
+  activerecord:
+    attributes:
+      'refinery/promos/promo':
+        title: Title
+        promo_image: Promo Image
+        description: Description
+        promo_status: Promo Status
+        promo_pdf: Promo Pdf
+        start_date: Start Date
+        end_date: End Date
