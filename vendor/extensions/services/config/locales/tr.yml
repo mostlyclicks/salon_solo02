@@ -1,0 +1,30 @@
+tr:
+  refinery:
+    plugins:
+      services:
+        title: Services
+    services:
+      admin:
+        services:
+          actions:
+            create_new: Yeni Ekle Service
+            reorder: Tekrar sirala Services
+            reorder_done: Tekrar siralama tamamlandiServices
+          records:
+            title: Services
+            sorry_no_results: Uzgunum! Herhangi bir sonuc bulunamadi.
+            no_items_yet: Herhangi bir Services yok henuz.  Tikla "Yeni Ekle Service" eklemek senin ilk service.
+          service:
+            view_live_html: Bunu canlu service goruntule <br/><em>(yeni bir pencerede acar)</em>
+            edit: Bunu Duzenle service
+            delete: Bunu Sil service sonsuza dek
+      services:
+        show:
+          other: Diger Services
+  activerecord:
+    attributes:
+      'refinery/services/service':
+        title: Title
+        service_image: Service Image
+        service_excerpt: Service Excerpt
+        service_description: Service Description

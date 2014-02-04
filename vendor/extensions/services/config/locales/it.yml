@@ -1,0 +1,30 @@
+it:
+  refinery:
+    plugins:
+      services:
+        title: Services
+    services:
+      admin:
+        services:
+          actions:
+            create_new: Aggiungi Nuovo Service
+            reorder: Riordina Services
+            reorder_done: Termina il Riordino di Services
+          records:
+            title: Services
+            sorry_no_results: "Spiacenti! Nessun risultato trovato"
+            no_items_yet: Non ci sono ancora Services. Clicca "Aggiungi Nuovo Service" per aggiungere il tuo primo service.
+          service:
+            view_live_html: Guarda live questo service <br/><em>(apre una nuova finestra)</em>
+            edit: Modifica questo service
+            delete: Rimuovi per sempre questo service
+      services:
+        show:
+          other: Altri Services
+  activerecord:
+    attributes:
+      'refinery/services/service':
+        title: Title
+        service_image: Service Image
+        service_excerpt: Service Excerpt
+        service_description: Service Description
