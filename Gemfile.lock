@@ -1,6 +1,8 @@
 PATH
   remote: vendor/extensions
   specs:
+    refinerycms-products (1.0)
+      refinerycms-core (~> 2.1.1)
     refinerycms-promos (1.0)
       refinerycms-core (~> 2.1.1)
     refinerycms-services (1.0)
@@ -196,6 +198,7 @@ DEPENDENCIES
   rails (= 3.2.15)
   refinerycms (~> 2.1.0)
   refinerycms-acts-as-indexed (~> 1.0.0)
+  refinerycms-products!
   refinerycms-promos!
   refinerycms-services!
   sass-rails (~> 3.2.3)

@@ -14,3 +14,6 @@ Refinery::Promos::Engine.load_seed
 
 # Added by Refinery CMS Services extension
 Refinery::Services::Engine.load_seed
+
+# Added by Refinery CMS Products extension
+Refinery::Products::Engine.load_seed
