@@ -4,11 +4,13 @@ $header-navbar-default :-21px;
 $header-navbar-default-over :-92px;
 $header-fixed-top:51px;
 
-#hero-image {
-  height:450px;
-  background-image:url('hero.jpg');
-  background-position-y:50%;
-  background-position-x:50%;
-  text-align:center;
+#intro {
+  min-height:450px;
+  // background-image:url('mirror2.png');
+  padding-top:110px;
+  // background-position-y:50%;
+  // background-position-x:190%;
+  background-color:#b0b1b1;
+
   margin-top:$header-navbar-default-over;// <--- choose from header options above
 }

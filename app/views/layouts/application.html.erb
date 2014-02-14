@@ -19,12 +19,11 @@
         <!-- default xs nav -->
         <div class="visible-xs"><%= render "/refinery/headers/header_fixed_top" -%></div>
       </header>
-
-      <section id="page">
-        <%= yield %>
-      </section>
+      <div class="container-fluid">
+              <%= yield %>
+      </div>
       <footer>
-        <%= render "/refinery/footer" -%>
+        <%#= render "/refinery/footer" -%>
       </footer>
     </div>
     <%= render "/refinery/javascripts" %>

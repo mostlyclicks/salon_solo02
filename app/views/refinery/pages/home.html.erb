@@ -3,34 +3,77 @@
   .red-brdr {border:1px solid red;}
   .green-brdr {border:1px solid blue;}
 </style>
+<div id="intro"><div class="container">
+  <div class="row">
+    <div class="col-md-4 col-sm-3 text-center">
+      <%= image_tag 'logo.png', id: 'logo' %>
+    </div>
+    <div class="col-md-8 col-sm-6">
+      <%= raw @page.content_for(:body) %>
+    </div>
+  </div>
+</div></div>
 
-<div class="row blue-brdr" id="header">
-  <div class="container red-brdr">
+<div class="" id="services" style="">
+<div class="container">
+  <div class="row">
+    <div class="col-md-7 col-md-offset-4">
+      <%#= raw @page.content_for(:body) %>
+      <div class="row">
+            <% @services.each do |s| %>
+              <div class="col-md-4 col-xs-12">
+                <%= image_tag 'http://placehold.it/150x150', class: 'img-circle' %>
+                <h3><%= s.title %></h3> 
+                <p><%= raw s.service_excerpt %></p>
+              </div>
+            <% end %>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <%#= image_tag 'mirror-solo.png', style: '' %>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- <div id="promos" style="height:120px;background-color:#605f5e;margin-top:-125px;">
+  <div class="container">
     <div class="row">
+
+
+    </div>
+
+
+  </div>
+</div> -->
+
+
+
+
+<!-- <div class="row no-padding" id="top-header">
+  <div class="col-md-12 text-center">
+    <%#= image_tag 'logo.png', id: 'logo' %>
+  </div>
+
+</div> -->
+
+<!-- <div class="row" id="intro">
+  <div class="container">
+    <div class="row" style="height:600px;">
       <div class="col-md-12"><%= raw @page.content_for(:body) %></div>
     </div>
   </div>
-</div>
+</div> -->
 
-<div class="row green-brdr" id="promo">
+<!-- <div class="row green-brdr" id="promo">
 <% @promos.each do |p| %>
   <%= p.title %>
 <% end %>
-</div>
+</div> -->
 
-<div class="row blue-brdr" id="services">
-  <div class="container">
-    <div class="row">
-    <% @services.each do |s| %>
-    <div class="col-md-4 col-xs-1">
-      <h3><%= s.title %></h3> 
-      <p><%= raw s.service_excerpt %></p>
-    </div>
-    <% end %>
-  </div>
-</div>
 
-<div class="row red-brdr" id="products">
+
+<!-- <div class="row red-brdr" id="products">
   <div class="container">
     <div class="row">  
       <% @products.each do |p| %>
@@ -40,15 +83,15 @@
       <% end %>
     </div>
   </div>
-</div>
+</div> -->
 
-<div class="row" id="hours-map" style="border:1px solid blue;">
+<div class="" id="hours-map">
   <div class="container">
-    <div class="row" style="border:1px solid red">
-      <div class="col-md-6 col-sm-6 col-xs-12">
+    <div class="row" style="">
+      <div class="col-md-7 col-sm-6 col-xs-12">
         <%= raw @page.content_for(:hours) %>
       </div>
-      <div class="col-md-6 col-sm-6 col-xs-12">
+      <div class="col-md-5 col-sm-6 col-xs-12">
         <%= raw @page.content_for(:map) %>
       </div>
     </div>

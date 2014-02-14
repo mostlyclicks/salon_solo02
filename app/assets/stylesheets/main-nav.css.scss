@@ -1,4 +1,33 @@
+@import 'custom';
+
 
 .nav-design {
 	background-color:#cdcdcd;
+}
+
+.navbar div {text-align:center;}
+.navbar {
+  border-bottom:1px dotted rgba(0,0,0, .3);
+
+}
+.navbar-nav > li > a{
+  font-family:$font-sans-serif;
+  color:#000000;
+  // width:221px;
+  font-size:20px;
+}
+
+.navbar-nav > li > a:hover {
+  background-color:rgba(255,255,255, .3);
+  color:white;
+}
+
+.navbar-text {
+  font-family:$font-sans-serif;
+  font-weight: 100;
+  font-size:18px;
+  line-height:18px;
+  color:rgba(0,0,0,.5);
+
+ 
 }
