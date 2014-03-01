@@ -1,0 +1,10 @@
+
+$font-sans: helvetica neue,helvetica, arial, sans-serif;
+$font-sans-serif:Times, serif;;
+$gray: #3f423b;
+$sky: #7f9da7;
+$white: #ffffff;
+$off-white:#edecec;
+$blue:#3d4d5c;
+$dark-gray:#605f5e;
+$red-brown:#5e3c29;

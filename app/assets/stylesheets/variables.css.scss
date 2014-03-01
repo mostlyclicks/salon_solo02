@@ -1,0 +1,36 @@
+$font-chalk1:'Yellowtail', cursive;
+$font-chalk2:'Reenie Beanie', cursive;
+$font-chalk3:'Dawning of a New Day', cursive;
+$font-chalk4:'Sacramento', cursive;
+$font-chalk5:'Amatic SC', cursive;
+
+$font-sans: helvetica neue,helvetica, arial, sans-serif;
+$font-sans-serif:Times, serif;;
+$gray: #3f423b;
+$sky: #7f9da7;
+$white: #ffffff;
+$off-white:#edecec;
+$blue:#3d4d5c;
+$dark-gray:#605f5e;
+$red-brown:#5e3c29;
+
+
+  .rotate {
+
+/* Safari */
+-webkit-transform: rotate(-10deg);
+
+/* Firefox */
+-moz-transform: rotate(-10deg);
+
+/* IE */
+-ms-transform: rotate(-10deg);
+
+/* Opera */
+-o-transform: rotate(-10deg);
+
+/* Internet Explorer */
+filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+
+
+}

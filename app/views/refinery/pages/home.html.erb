@@ -3,26 +3,106 @@
   .red-brdr {border:1px solid red;}
   .green-brdr {border:1px solid blue;}
 </style>
-<div id="intro"><div class="container">
-  <div class="row">
-    <div class="col-md-4 col-sm-3 text-center">
-      <%= image_tag 'logo.png', id: 'logo' %>
-    </div>
-    <div class="col-md-8 col-sm-6">
-      <%= raw @page.content_for(:body) %>
+<div id="intro">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 col-sm-3 col-xs-5 text-center">
+        <%= image_tag 'salonsolo5b-2.png', id: 'logo', class: 'img-responsive' %>
+      </div>
+
+
+      <% @image_array = [] %>
+      <% @page.images.each_with_index do |image, index| %>
+        <% @image_array << {image: image, index: index} %>
+      <% end %>
+
+      <% @hero_image = @image_array.sample %>
+      <% @hero_image[:image] %>
+  
+      <div class="col-md-8 col-sm-6">
+        <% @page.images.each_with_index do |image, index| %>
+        <%#= bg_color = raw @page.caption_for_image_index(index) %>
+
+        <% if @hero_image[:index]  == 0 %>
+          <% bg_style = 'rgba(132,130,126, 1)' %>
+          <% @phone_style = 'rgba(132,130,126, .9)' %>
+        <% elsif @hero_image[:index]  == 1 %>
+          <% bg_style = 'rgba(163,171,160, 1)' %>
+          <% @phone_style = 'rgba(163,171,160, .9)' %>
+        <% elsif @hero_image[:index]  == 2 %>
+          <% bg_style = 'rgba(72,89,107, 1)' %>
+          <% @phone_style = 'rgba(72,89,107, .9)' %>
+        <% elsif @hero_image[:index]  == 3 %>
+          <% bg_style = 'rgba(128,129,123, 1)' %>
+          <% @phone_style = 'rgba(128,129,123, .9)' %>
+        <% else %>
+          <% bg_style = 'rgba(149,153,165, 1)' %>
+          <% @phone_style = 'rgba(149,153,165, .9)' %>
+        <% end %>
+
+          <style>
+            #intro {
+              background-image:url(<%= @hero_image[:image].url %>);
+              background-position-y:50%;
+              background-position-x:50%;
+              background-repeat: no-repeat;
+              background-color:<%= bg_style %>;
+            }
+          </style>
+
+        <% end %>
+
+        <%#= raw @page.content_for(:body) %>
+      </div>
     </div>
   </div>
-</div></div>
+</div>
+
+<div id="chalk">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4" id="chalk2">
+        <h1>Welcome to Salon Solo</h1>
+        <p>Hey, checkout our new site. Also, a big welcome to Leah Turk. Hairstyles with flair. Stop in or call to make an appointment.</p>
+      </div>
+      <div class="col-md-4" id="chalk5">
+        <h1>Spring is around the corner</h1>
+        <p>Yeah, we said it. Just because you've covered yourself in layers of fleece doesn't mean you can't treat yourself to a facial, waxing or massage. Treat yourself!</p>
+      </div>
+      <div class="col-md-4" id="chalk4">
+        <h1>Cut & Color</h1>
+        <p>Get ready for spring break! Cut and color like it's summer somewhere because it is.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 
 <div class="" id="services" style="">
 <div class="container">
   <div class="row">
-    <div class="col-md-7 col-md-offset-4">
+    <div class="col-md-4" id="phone">
+      <h4>Call for an appointment:</h4>
+      <h2>(608) 782-1243</h2>
+
+      <hr>
+
+      
+      <div class="col-md-10 col-md-offset-2" id="hours">
+        <%= raw @page.content_for(:hours) %>
+      </div>
+     
+
+    </div>
+    <div class="col-md-7">
       <%#= raw @page.content_for(:body) %>
       <div class="row">
+        <%#= @image_array.sample %>
             <% @services.each do |s| %>
-              <div class="col-md-4 col-xs-12">
-                <%= image_tag 'http://placehold.it/150x150', class: 'img-circle' %>
+              <div class="col-md-4 col-sm-6 col-xs-12">
+
+                <%= image_fu s.service_image, '150x150c', class: 'img-circle' %>
                 <h3><%= s.title %></h3> 
                 <p><%= raw s.service_excerpt %></p>
               </div>
@@ -35,6 +115,8 @@
   </div>
 </div>
 </div>
+
+
 
 <!-- <div id="promos" style="height:120px;background-color:#605f5e;margin-top:-125px;">
   <div class="container">
@@ -86,12 +168,9 @@
 </div> -->
 
 <div class="" id="hours-map">
-  <div class="container">
+  <div class="container-fluid">
     <div class="row" style="">
-      <div class="col-md-7 col-sm-6 col-xs-12">
-        <%= raw @page.content_for(:hours) %>
-      </div>
-      <div class="col-md-5 col-sm-6 col-xs-12">
+      <div class="col-md-12 google-maps">
         <%= raw @page.content_for(:map) %>
       </div>
     </div>

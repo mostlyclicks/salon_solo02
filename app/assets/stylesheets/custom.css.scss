@@ -1,11 +1,4 @@
-$font-sans: helvetica neue,helvetica, arial, sans-serif;
-$font-sans-serif:Times, serif;;
-$gray: #3f423b;
-$sky: #7f9da7;
-$white: #ffffff;
-$off-white:#edecec;
-$blue:#3d4d5c;
-$dark-gray:#605f5e;
+@import 'variables';
 
 .no-padding {padding:0;}
 
@@ -15,17 +8,26 @@ body {
 	/* padding-top:26px;for top fixed nav*/
 }
 
+.img-circle {
+  border:10px solid rgba(0,0,0,.2);
+}
+
 #top-header {
   margin-top:0;
 
 }
 
 #logo {
-  padding-top:20px;
+  margin-top:50px;
+  margin-left:20px;
+  padding-top:0px;
   padding-bottom:0px;
+
 }
 
 #intro {
+  background-position-x:0;
+  
   font-family:$font-sans;
   h1 {
     margin-top:.65em;
@@ -40,14 +42,83 @@ body {
   }
 }
 
+#phone {
+  padding:10px;
+  text-align: center;
+  font-family: $font-sans;
+  background-color:rgba(0,0,0,.1);
+  margin-bottom:20px;
+  
+  h4 {
+    font-size:20px;
+    font-weight:200;
+  }
+  h2 {
+    font-size:32px;
+    font-weight:100;
+    margin-top:.15em;
+  }
+  hr {
+    border-top:1px dotted rgba(255,255,255, .2);
+  }
+}
+
+#hours p {
+  text-align:left;
+  font-size:18px !important;
+  margin-bottom:0;
+}
+
+#chalk {
+  padding:20px 0;
+  background-image:url('chalkboard.jpg');
+  background-position-y:90%;
+  box-shadow:inset 0 0 15px rgba(0,0,0,.9);
+  min-height:250px;
+  overflow:none;
+  color:$white * .5;
+  text-align:center;
+
+  p {
+    font-size:30px;
+  }
+  h1 {
+    font-family: $font-chalk1;
+    font-size:3em;
+  
+  }
+
+  #chalk2 {
+    border-bottom:1px dotted $white * .5;
+  }
+
+  #chalk5 {
+    border-bottom:1px dotted $white * .5;
+  }
+
+  #chalk2 h1, #chalk2 p {
+    font-family: $font-chalk2;
+  }
+  #chalk3 h1, #chalk3 p  {
+    font-family: $font-chalk3;
+  }
+  #chalk4 h1, #chalk4 p {
+    font-family: $font-chalk4;
+  }
+  #chalk5 h1, #chalk5 p {
+    font-family: $font-chalk5;
+  }
+}
+
 #services {
   min-height:395px;
   
-  // background-color:darken($sky, 25%);
-  background-image:url('sunray_mirror.jpg');
+  background-color:darken($blue, 8%);
+  // background-image:url('sunray_mirror.jpg');
+  text-align:center;
   background-position-x:-200px;
   padding:2em 0 2em 0;
-   color:$white;
+  color:rgba(255,255,255,.8);
    h3 {
      font-family:$font-sans;
      font-weight:200;
@@ -57,6 +128,7 @@ body {
      line-height: 1.55em;
      font-weight:300;
      font-size:90%;
+     color:rgba(255,255,255,.6);
    }
 }
 
@@ -70,8 +142,25 @@ p {
 }
 
 #hours-map {
-  padding-top:40px;
+  padding-top:0px;
+  margin:0 20px;
 }
+
+.google-maps {
+    position: relative;
+    padding-bottom: 125%; // This is the aspect ratio
+    height: 0;
+    overflow: hidden;
+}
+.google-maps iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+
 
 
 #section-2 {

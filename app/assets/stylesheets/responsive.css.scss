@@ -1,0 +1,107 @@
+@import 'variables';
+//Extra small devices (phones, less than 768px)
+//No media query since this is the default in Bootstrap */
+
+//Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  // body {
+  //   border:3px solid red;
+  // }
+  #logo {
+  margin-top:20px;
+  margin-bottom:20px;
+  margin-left:20px;
+  }
+
+  #chalk2 {
+    border-bottom:1px dotted $white * .5;
+    border-right:none !important;
+  }
+
+  #chalk5 {
+    border-bottom:1px dotted $white * .5;
+    border-right:none !important;
+  }
+
+  .google-maps {
+      position: relative;
+      padding-bottom: 80%; // This is the aspect ratio
+      height: 0;
+      overflow: hidden;
+  }
+  .google-maps iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100% !important;
+      height: 100% !important;
+  }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  // body {
+  //   border:3px solid blue;
+  // }
+  #logo {
+  margin-top:-10px;
+  margin-bottom:20px;
+  margin-left:50px;
+
+  }
+  #phone {
+    text-align:center;
+    background-color:rgba(0,0,0,0);
+  }
+
+  #chalk2 {
+    border-right:1px dotted $white * .5  !important;
+    border-bottom:none !important;
+  }
+
+  #chalk5 {
+    border-right:1px dotted $white * .5  !important;
+    border-bottom:none !important;
+  }
+
+  .google-maps {
+      position: relative;
+      padding-bottom: 50%; // This is the aspect ratio
+      height: 0;
+      overflow: hidden;
+  }
+  .google-maps iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100% !important;
+      height: 100% !important;
+  }
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  // body {
+  //   border:3px solid yellow;
+  // }
+  #logo {
+
+  margin-left:85px;
+
+  }
+
+  .google-maps {
+      position: relative;
+      padding-bottom: 30%; // This is the aspect ratio
+      height: 0;
+      overflow: hidden;
+  }
+  .google-maps iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100% !important;
+      height: 100% !important;
+  }
+
+}
