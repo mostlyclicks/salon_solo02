@@ -108,10 +108,10 @@
 <div id="menu">
   <div class="container">
     <div class="row">
-      <div class="col-md-12" style="border-bottom:1px dotted rgba(0,0,0, .4);height:129px;">
+      <div class="col-md-12">
         <h1 style="">Menu of Services</h1>
 
-        <div class="row">
+        <div class="row" id="table-section">
           <div class="col-md-4">
             <table class="table">
               <tr>
@@ -119,11 +119,11 @@
               </tr>
               <tr clas="first-row">
                 <td>Haircut</td>
-                <td>34+</td>
+                <td>$34+</td>
               </tr>
               <tr>
                 <td>Children (12 &amp; younger)</td>
-                <td>20</td>
+                <td>$20</td>
               </tr>
               <tr>
                 <td>Special Events/Updo</td>
@@ -136,23 +136,32 @@
               <th colspan="2">Nails</th>
               </tr>
               <tr clas="first-row">
-                <td>Color retouch</td>
-                <td>70+</td>
+                <td>Manicure - 45 minutes</td>
+                <td>$20</td>
               </tr>
               <tr>
-                <td>Highlights/Lowlights<br />
-                  - partial<br />
-                  - full<br />
-                  <small>*long hair extra</small>
-                </td>
-                <td>&nbsp;<br />
-                  70+<br />
-                  100+
-                </td>
+                <td>Gel polish manicure - 1 hour</td>
+                <td>$30</td>
               </tr>
               <tr>
-                <td>Perms/Texture</td>
-                <td>Consultation only</td>
+                <td>Pedicure - 1 hour 15 min</td>
+                <td>$35</td>
+              </tr>
+              <tr>
+                <td>Full set gel (plain) 1 hour 15 min</td>
+                <td>$35</td>
+              </tr>
+              <tr>
+                <td>Full set gel (French) 1 hour 15 min</td>
+                <td>$40</td>
+              </tr>
+              <tr>
+                <td>Fill for gel set (plain) 1 hour 15 min</td>
+                <td>$30</td>
+              </tr>
+              <tr>
+                <td>Fill for gel set (French) 1 hour 15 min</td>
+                <td>$35</td>
               </tr>
             </table>
           </div>
@@ -168,7 +177,7 @@
               </tr>
               <tr clas="first-row">
                 <td>Color retouch</td>
-                <td>70+</td>
+                <td>$70+</td>
               </tr>
               <tr>
                 <td>Highlights/Lowlights<br />
@@ -178,7 +187,7 @@
                 </td>
                 <td>&nbsp;<br />
                   70+<br />
-                  100+
+                  $100+
                 </td>
               </tr>
               <tr>
@@ -192,27 +201,25 @@
               <th colspan="2">Massage</th>
               </tr>
               <tr clas="first-row">
-                <td>Repairing treatment<br />
-                  <small>with service</small></td>
-                <td>15</td>
+                <td>30 minutes</td>
+                <td>$40</td>
               </tr>
               <tr>
-                <td>Clariflying treatment<br />
-                  <small>without service</small></td>
-                <td>30</td>
+                <td>60 minutes</td>
+                <td>$70</td>
 
               </tr>
               <tr>
-                <td>Shine treatment</td>
-                <td>30</td>
+                <td>90 minutes</td>
+                <td>$90</td>
               </tr>
-                            <tr>
-                <td>Blowdry</td>
-                <td>25</td>
+              <tr>
+                <td>120 minutes</td>
+                <td>$120</td>
               </tr>
-                            <tr>
-                <td>Blowdry with hot tools</td>
-                <td>35</td>
+              <tr>
+                <td>Add on reflexology or stone massage - 15 minutes</td>
+                <td>$15</td>
               </tr>
             </table>
 
@@ -225,25 +232,25 @@
               <tr clas="first-row">
                 <td>Repairing treatment<br />
                   <small>with service</small></td>
-                <td>15</td>
+                <td>$15</td>
               </tr>
               <tr>
                 <td>Clariflying treatment<br />
                   <small>without service</small></td>
-                <td>30</td>
+                <td>$30</td>
 
               </tr>
               <tr>
                 <td>Shine treatment</td>
-                <td>30</td>
+                <td>$30</td>
               </tr>
                             <tr>
                 <td>Blowdry</td>
-                <td>25</td>
+                <td>$25</td>
               </tr>
                             <tr>
                 <td>Blowdry with hot tools</td>
-                <td>35</td>
+                <td>$35</td>
               </tr>
             </table>
 
@@ -251,28 +258,28 @@
               <tr>
               <th colspan="2">Aesthetics</th>
               </tr>
-              <tr clas="first-row">
+              <tr class="first-row">
                 <td>Repairing treatment<br />
                   <small>with service</small></td>
-                <td>15</td>
+                <td>$15</td>
               </tr>
               <tr>
                 <td>Clariflying treatment<br />
                   <small>without service</small></td>
-                <td>30</td>
+                <td>$30</td>
 
               </tr>
               <tr>
                 <td>Shine treatment</td>
-                <td>30</td>
+                <td>$30</td>
               </tr>
                             <tr>
                 <td>Blowdry</td>
-                <td>25</td>
+                <td>$25</td>
               </tr>
                             <tr>
                 <td>Blowdry with hot tools</td>
-                <td>35</td>
+                <td>$35</td>
               </tr>
             </table>
           </div>
@@ -285,14 +292,46 @@
 
 
 
-<div class="" id="hours-map">
-  <div class="container-fluid">
+<div class="" id="footer">
+  <div class="container">
     <div class="row" style="">
-      <div class="col-md-12 google-maps hidden-xs">
-        <%= raw @page.content_for(:map) %>
+      <div class="col-md-4">
+        <h1>Our new location</h1>
+        <p class="lead">Salon Solo has moved (a little).<br />We are now located on the west side of HWY 16 just south of Gillette street and Plaza 16.</p>
+        <p class="lead">Salon Solo<br />
+          N3363 State Hwy 16<br />
+          La Crosse, Wisconsin 54601</p>
+
+        <!-- google-maps -->
+        <%#= raw @page.content_for(:map) %>
+      </div>
+      <div class="col-md-4">
+        <h1>Connect with Salon Solo</h1>
+        <p class="lead">
+          <i class="fa fa-phone-square"></i> (608) 782-1243<br />
+          <a href="https://www.facebook.com/pages/Salon-soLo/212657592093798"><i class="fa fa-facebook-square fa-1x"></i> Like us on Facebook</a>
+        </p>
+      </div>
+      <div class="col-md-4">
+        <h1>Gift Cards</h1>
+        <p class="lead">Gift cards from Salon Solo make great presents for loved ones and friends. Please call or stop in for more information.</p>
+
       </div>
     </div>
   </div>
+</div>
+
+<div id="sub-footer">
+  <div class="container-fluid">
+    <div class="col-md-12 text-center">
+      <small>&copy; <%= Time.now.strftime('%Y') %>. All Rights Reserved. | Salon Solo, LLC</small>
+
+    </div>
+
+
+  </div>
+
+
 </div>
 
 

@@ -117,7 +117,7 @@ body {
   // background-image:url('sunray_mirror.jpg');
   text-align:center;
   background-position-x:-200px;
-  padding:2em 0 2em 0;
+  padding:3.5em 0 2em 0;
   color:rgba(255,255,255,.8);
    h3 {
      font-family:$font-sans;
@@ -146,16 +146,17 @@ body {
 }
 
 #menu {
-  min-height:100vh;
+  // min-height:400px;
    box-shadow:none;
-  //box-shadow:inset 1px 1px 50px rgba(0,0,0,.4);
-  padding-bottom:0;
+  box-shadow:inset 1px 1px 50px rgba(0,0,0,.4);
+  padding-bottom:30px;
   h1 {
     font-family:$font-sans;
     font-weight:100;
     padding-top:20px;margin-bottom:80px;
     text-align:center;
   }
+  #table-section {border-top:1px dotted black;padding-top:20px;margin-top:-31px;}
   table {
     box-shadow:1px 1px 3px rgba(0,0,0,.2);
   }
@@ -169,14 +170,9 @@ body {
   }
   td:last-child {
     text-align:right;
-}
-
-
+  }
 
 }
-
-
-
 
 
 
@@ -187,52 +183,57 @@ p {
 }
 
 #hours-map {
+  background-color:$red-brown;
   padding-top:0px;
-  margin:0 20px;
-}
-
-.google-maps {
-    position: relative;
-    padding-bottom: 125%; // This is the aspect ratio
-    height: 0;
-    overflow: hidden;
+  // margin:0 20px;
+  color:$white;
 
 }
-.google-maps iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100% !important;
-    height: 100% !important;
-}
 
+// .google-maps {
+//     position: relative;
+//     padding-bottom: 125%; // This is the aspect ratio
+//     height: 0;
+//     overflow: hidden;
 
+// }
+// .google-maps iframe {
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     width: 100% !important;
+//     height: 100% !important;
+// }
 
-
-#section-2 {
-  background-image:url('sunrise.jpg');
-  background-position-y:90%;
-  background-position-x:50%;
-  min-height:400px;
-  background-repeat:no-repeat;
-  
-  p {
-    padding:2em 0;
-    font-family:$font-sans;
-    font-weight:100;
-    font-size:3em;
-    line-height:1.20em;
-  }
-}
 
 #footer {
   padding:2em 0;
-  background-color:#000000;
-  color:darken($white, 65%);
+  background-color:darken($red-brown, 4%);
+  color:rgba(255,255,255,.5);
+    h1 {
+    font-weight:100;
+    color:rgba(255,255,255,.9);
+  }
+
   li {
     list-style-type: none;
     margin-left:0;
   }
+  a {
+    color:rgba(255,255,255,.5);
+    &:hover {
+    color:rgba(255,255,255,.9);
+    text-decoration: none;
+  }
+  }
+
+}
+
+#sub-footer {
+  line-height:40px;
+  min-height:40px;
+  background-color:darken($red-brown, 13%);
+  color:rgba(255,255,255,.5);
 }
 
 
