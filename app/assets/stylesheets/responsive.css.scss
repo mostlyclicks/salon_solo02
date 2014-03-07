@@ -77,6 +77,9 @@
       width: 100% !important;
       height: 100% !important;
   }
+  #menu {
+    box-shadow:inset 1px 1px 50px rgba(0,0,0,.4);
+  }
 }
 
 /* Large devices (large desktops, 1200px and up) */

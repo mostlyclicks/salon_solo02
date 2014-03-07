@@ -62,22 +62,17 @@
   <div class="container">
     <div class="row">
       <div class="col-md-4" id="chalk2">
-        <h1>Welcome to Salon Solo</h1>
-        <p>Hey, checkout our new site. Also, a big welcome to Leah Turk. Hairstyles with flair. Stop in or call to make an appointment.</p>
+        <%= raw @page.content_for(:promo1) %>
       </div>
       <div class="col-md-4" id="chalk5">
-        <h1>Spring is around the corner</h1>
-        <p>Yeah, we said it. Just because you've covered yourself in layers of fleece doesn't mean you can't treat yourself to a facial, waxing or massage. Treat yourself!</p>
+        <%= raw @page.content_for(:promo2) %>
       </div>
       <div class="col-md-4" id="chalk4">
-        <h1>Cut & Color</h1>
-        <p>Get ready for spring break! Cut and color like it's summer somewhere because it is.</p>
+        <%= raw @page.content_for(:promo3) %>
       </div>
     </div>
   </div>
 </div>
-
-
 
 <div class="" id="services" style="">
 <div class="container">
@@ -85,22 +80,18 @@
     <div class="col-md-4" id="phone">
       <h4>Call for an appointment:</h4>
       <h2>(608) 782-1243</h2>
-
       <hr>
-
-      
       <div class="col-md-10 col-md-offset-2" id="hours">
         <%= raw @page.content_for(:hours) %>
       </div>
-     
-
+      <%= image_tag 'mirror-solo.png', id: 'mirror', class: 'hidden-sm hidden-xs' %>
     </div>
     <div class="col-md-7">
       <%#= raw @page.content_for(:body) %>
       <div class="row">
         <%#= @image_array.sample %>
             <% @services.each do |s| %>
-              <div class="col-md-4 col-sm-6 col-xs-12">
+              <div class="col-md-4 col-sm-6 col-xs-12 service_buckets">
 
                 <%= image_fu s.service_image, '150x150c', class: 'img-circle' %>
                 <h3><%= s.title %></h3> 
@@ -109,129 +100,200 @@
             <% end %>
       </div>
     </div>
-    <div class="col-md-4">
-      <%#= image_tag 'mirror-solo.png', style: '' %>
-    </div>
+
   </div>
 </div>
 </div>
 
-
-
-<!-- <div id="promos" style="height:120px;background-color:#605f5e;margin-top:-125px;">
+<div id="menu">
   <div class="container">
     <div class="row">
+      <div class="col-md-12" style="border-bottom:1px dotted rgba(0,0,0, .4);height:129px;">
+        <h1 style="">Menu of Services</h1>
+
+        <div class="row">
+          <div class="col-md-4">
+            <table class="table">
+              <tr>
+              <th colspan="2">Hair</th>
+              </tr>
+              <tr clas="first-row">
+                <td>Haircut</td>
+                <td>34+</td>
+              </tr>
+              <tr>
+                <td>Children (12 &amp; younger)</td>
+                <td>20</td>
+              </tr>
+              <tr>
+                <td>Special Events/Updo</td>
+                <td>Consultation only</td>
+              </tr>
+            </table>
+
+            <table class="table">
+              <tr>
+              <th colspan="2">Nails</th>
+              </tr>
+              <tr clas="first-row">
+                <td>Color retouch</td>
+                <td>70+</td>
+              </tr>
+              <tr>
+                <td>Highlights/Lowlights<br />
+                  - partial<br />
+                  - full<br />
+                  <small>*long hair extra</small>
+                </td>
+                <td>&nbsp;<br />
+                  70+<br />
+                  100+
+                </td>
+              </tr>
+              <tr>
+                <td>Perms/Texture</td>
+                <td>Consultation only</td>
+              </tr>
+            </table>
+          </div>
 
 
+
+
+          <div class="col-md-4">
+
+            <table class="table">
+              <tr>
+              <th colspan="2">Color</th>
+              </tr>
+              <tr clas="first-row">
+                <td>Color retouch</td>
+                <td>70+</td>
+              </tr>
+              <tr>
+                <td>Highlights/Lowlights<br />
+                  - partial<br />
+                  - full<br />
+                  <small>*long hair extra</small>
+                </td>
+                <td>&nbsp;<br />
+                  70+<br />
+                  100+
+                </td>
+              </tr>
+              <tr>
+                <td>Perms/Texture</td>
+                <td>Consultation only</td>
+              </tr>
+            </table>
+
+            <table class="table">
+              <tr>
+              <th colspan="2">Massage</th>
+              </tr>
+              <tr clas="first-row">
+                <td>Repairing treatment<br />
+                  <small>with service</small></td>
+                <td>15</td>
+              </tr>
+              <tr>
+                <td>Clariflying treatment<br />
+                  <small>without service</small></td>
+                <td>30</td>
+
+              </tr>
+              <tr>
+                <td>Shine treatment</td>
+                <td>30</td>
+              </tr>
+                            <tr>
+                <td>Blowdry</td>
+                <td>25</td>
+              </tr>
+                            <tr>
+                <td>Blowdry with hot tools</td>
+                <td>35</td>
+              </tr>
+            </table>
+
+          </div>
+          <div class="col-md-4">
+            <table class="table">
+              <tr>
+              <th colspan="2">Treatment/Add-Ons</th>
+              </tr>
+              <tr clas="first-row">
+                <td>Repairing treatment<br />
+                  <small>with service</small></td>
+                <td>15</td>
+              </tr>
+              <tr>
+                <td>Clariflying treatment<br />
+                  <small>without service</small></td>
+                <td>30</td>
+
+              </tr>
+              <tr>
+                <td>Shine treatment</td>
+                <td>30</td>
+              </tr>
+                            <tr>
+                <td>Blowdry</td>
+                <td>25</td>
+              </tr>
+                            <tr>
+                <td>Blowdry with hot tools</td>
+                <td>35</td>
+              </tr>
+            </table>
+
+            <table class="table">
+              <tr>
+              <th colspan="2">Aesthetics</th>
+              </tr>
+              <tr clas="first-row">
+                <td>Repairing treatment<br />
+                  <small>with service</small></td>
+                <td>15</td>
+              </tr>
+              <tr>
+                <td>Clariflying treatment<br />
+                  <small>without service</small></td>
+                <td>30</td>
+
+              </tr>
+              <tr>
+                <td>Shine treatment</td>
+                <td>30</td>
+              </tr>
+                            <tr>
+                <td>Blowdry</td>
+                <td>25</td>
+              </tr>
+                            <tr>
+                <td>Blowdry with hot tools</td>
+                <td>35</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+
+      </div>
     </div>
-
-
   </div>
-</div> -->
+</div>
 
 
-
-
-<!-- <div class="row no-padding" id="top-header">
-  <div class="col-md-12 text-center">
-    <%#= image_tag 'logo.png', id: 'logo' %>
-  </div>
-
-</div> -->
-
-<!-- <div class="row" id="intro">
-  <div class="container">
-    <div class="row" style="height:600px;">
-      <div class="col-md-12"><%= raw @page.content_for(:body) %></div>
-    </div>
-  </div>
-</div> -->
-
-<!-- <div class="row green-brdr" id="promo">
-<% @promos.each do |p| %>
-  <%= p.title %>
-<% end %>
-</div> -->
-
-
-
-<!-- <div class="row red-brdr" id="products">
-  <div class="container">
-    <div class="row">  
-      <% @products.each do |p| %>
-        <div class="col-md-4 col-xs-1">
-          <%= p.title %>
-        </div>  
-      <% end %>
-    </div>
-  </div>
-</div> -->
 
 <div class="" id="hours-map">
   <div class="container-fluid">
     <div class="row" style="">
-      <div class="col-md-12 google-maps">
+      <div class="col-md-12 google-maps hidden-xs">
         <%= raw @page.content_for(:map) %>
       </div>
     </div>
   </div>
 </div>
 
-
-
-
-
-<!-- 
-<div id="hero-image">
-  <div class="container">
-    <div class="row">
-      <h1 id='logo'>
-        <%#= link_to Refinery::Core.site_name, refinery.root_path %>
-      </h1>
-    </div>
-  </div>
-</div>
-
-<div id="section-1">
-  <div class="container">
-    <div class="row">
-      <%#= render '/refinery/content_page' %>
-      <div class="col-md-4">
-        <h3>Driving through fog</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco</p>
-      </div>
-      <div class="col-md-4">
-        <h3>Driving through fog</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco</p>
-      </div>
-      <div class="col-md-4">
-        <h3>Driving through fog</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-<div id="section-2">
-  <div class="container">
-    <div class="row">
-      <%#= render '/refinery/content_page' %>
-      
-      <div class="col-md-6 col-md-offset-6">
-        
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco</p>
-      </div>
-    </div>
-  </div>
-</div> -->
 
 

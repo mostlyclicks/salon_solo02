@@ -112,7 +112,7 @@ body {
 
 #services {
   min-height:395px;
-  
+  position:relative;
   background-color:darken($blue, 8%);
   // background-image:url('sunray_mirror.jpg');
   text-align:center;
@@ -123,14 +123,59 @@ body {
      font-family:$font-sans;
      font-weight:200;
      letter-spacing:.80px ;
+     margin-top:10px;
    }
    p {
      line-height: 1.55em;
      font-weight:300;
      font-size:90%;
-     color:rgba(255,255,255,.6);
+     color:rgba(255,255,255,.5);
+   }
+   a {
+    color:rgba(255,255,255,1);
+    font-weight:400;
+   }
+   .service_buckets {
+    height:310px;
+   }
+   #mirror {
+    position:absolute;
+    top:210px;
+    left:0;
    }
 }
+
+#menu {
+  min-height:100vh;
+   box-shadow:none;
+  //box-shadow:inset 1px 1px 50px rgba(0,0,0,.4);
+  padding-bottom:0;
+  h1 {
+    font-family:$font-sans;
+    font-weight:100;
+    padding-top:20px;margin-bottom:80px;
+    text-align:center;
+  }
+  table {
+    box-shadow:1px 1px 3px rgba(0,0,0,.2);
+  }
+  th {
+    border-top:none !important;
+    font-family: $font-sans;
+    font-size:24px;
+    font-weight:100;
+    text-align:center;
+    background-color:rgba(0,0,0,.1);
+  }
+  td:last-child {
+    text-align:right;
+}
+
+
+
+}
+
+
 
 
 
@@ -151,6 +196,7 @@ p {
     padding-bottom: 125%; // This is the aspect ratio
     height: 0;
     overflow: hidden;
+
 }
 .google-maps iframe {
     position: absolute;

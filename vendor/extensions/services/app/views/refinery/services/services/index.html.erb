@@ -1,11 +1,51 @@
+<div id="intro">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-1 col-sm-3 col-xs-5 text-center">
+        <%= image_tag 'salonsolo5b-2.png', id: 'logo', class: 'img-responsive' %>
+      </div>
+
+
+     
+  
+      <div class="col-md-8 col-sm-6">
+       
+adf
+
+  
+
+        <%#= raw @page.content_for(:body) %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="chalk">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4" id="chalk2">
+        <%= raw @page.content_for(:promo1) %>
+      </div>
+      <div class="col-md-4" id="chalk5">
+        <%= raw @page.content_for(:promo2) %>
+      </div>
+      <div class="col-md-4" id="chalk4">
+        <%= raw @page.content_for(:promo3) %>
+      </div>
+    </div>
+  </div>
+</div>
+
 <% content_for :body do %>
-  <ul id="services">
+  <ul id="">
     <% @services.each do |service| %>
       <li>
-        <%= link_to service.title, refinery.services_service_path(service) %>
+        <%= link_to service.title, refinery.services_service_path(service) %><br />
+        <%= raw service.service_description %>
       </li>
     <% end %>
   </ul>
 <% end %>
 
 <%= render '/refinery/content_page' %>
+
