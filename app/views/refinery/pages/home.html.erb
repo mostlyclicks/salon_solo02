@@ -11,34 +11,34 @@
       </div>
 
 
-      <%# @image_array = [] %>
-      <%# @page.images.each_with_index do |image, index| %>
-        <%# @image_array << {image: image, index: index} %>
-      <%# end %>
+      <% @image_array = [] %>
+      <% @page.images.each_with_index do |image, index| %>
+        <% @image_array << {image: image, index: index} %>
+      <% end %>
 
-      <%# @hero_image = @image_array.sample %>
-      <%# @hero_image[:image] %>
+      <% @hero_image = @image_array.sample %>
+      <% @hero_image[:image] %>
   
       <div class="col-md-8 col-sm-6">
-        <%# @page.images.each_with_index do |image, index| %>
-        <%#= bg_color = raw @page.caption_for_image_index(index) %>
+        <% @page.images.each_with_index do |image, index| %>
+        <%= bg_color = raw @page.caption_for_image_index(index) %>
 
-        <%# if @hero_image[:index]  == 0 %>
-          <%# bg_style = 'rgba(132,130,126, 1)' %>
-          <%# @phone_style = 'rgba(132,130,126, .9)' %>
-        <%# elsif @hero_image[:index]  == 1 %>
-          <%# bg_style = 'rgba(163,171,160, 1)' %>
-          <%# @phone_style = 'rgba(163,171,160, .9)' %>
-        <%# elsif @hero_image[:index]  == 2 %>
-          <%# bg_style = 'rgba(72,89,107, 1)' %>
-          <%# @phone_style = 'rgba(72,89,107, .9)' %>
-        <%# elsif @hero_image[:index]  == 3 %>
-          <%# bg_style = 'rgba(128,129,123, 1)' %>
-          <%# @phone_style = 'rgba(128,129,123, .9)' %>
-        <%# else %>
-          <%# bg_style = 'rgba(149,153,165, 1)' %>
-          <%# @phone_style = 'rgba(149,153,165, .9)' %>
-        <%# end %>
+        <% if @hero_image[:index]  == 0 %>
+          <% bg_style = 'rgba(132,130,126, 1)' %>
+          <% @phone_style = 'rgba(132,130,126, .9)' %>
+        <% elsif @hero_image[:index]  == 1 %>
+          <% bg_style = 'rgba(163,171,160, 1)' %>
+          <% @phone_style = 'rgba(163,171,160, .9)' %>
+        <% elsif @hero_image[:index]  == 2 %>
+          <% bg_style = 'rgba(72,89,107, 1)' %>
+          <% @phone_style = 'rgba(72,89,107, .9)' %>
+        <% elsif @hero_image[:index]  == 3 %>
+          <% bg_style = 'rgba(128,129,123, 1)' %>
+          <% @phone_style = 'rgba(128,129,123, .9)' %>
+        <% else %>
+          <% bg_style = 'rgba(149,153,165, 1)' %>
+          <% @phone_style = 'rgba(149,153,165, .9)' %>
+        <% end %>
 
           <style>
             #intro {
@@ -46,7 +46,7 @@
               background-position-y:50%;
               background-position-x:50%;
               background-repeat: no-repeat;
-              background-color:blue;/*<%#= bg_style %>*/
+              background-color:<%= bg_style %>;
             }
           </style>
 

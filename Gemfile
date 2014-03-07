@@ -7,7 +7,7 @@ gem 'rails', '3.2.15'
 
 gem 'pg'
 gem 'sass-rails',   '~> 3.2.3'
-gem 'unicorn'
+#gem 'unicorn'
 gem 'rails_12factor'
 
 
