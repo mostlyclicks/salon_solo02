@@ -27,9 +27,47 @@
       <div class="container-fluid">
               <%= yield %>
       </div>
-      <footer>
-        <%#= render "/refinery/footer" -%>
-      </footer>
+      <div class="" id="footer">
+  <div class="container">
+    <div class="row" style="">
+      <div class="col-md-4">
+        <h1>Our new location</h1>
+        <p class="lead">Salon Solo has moved (a little).<br />We are now located on the west side of HWY 16 just south of Gillette street and Plaza 16.</p>
+        <p class="lead">Salon Solo<br />
+          N3363 State Hwy 16<br />
+          La Crosse, Wisconsin 54601</p>
+
+        <!-- google-maps -->
+        <%#= raw @page.content_for(:map) %>
+      </div>
+      <div class="col-md-4">
+        <h1>Connect with Salon Solo</h1>
+        <p class="lead">
+          <i class="fa fa-phone-square"></i> (608) 782-1243<br />
+          <a href="https://www.facebook.com/pages/Salon-soLo/212657592093798"><i class="fa fa-facebook-square fa-1x"></i> Like us on Facebook</a>
+        </p>
+      </div>
+      <div class="col-md-4">
+        <h1>Gift Cards</h1>
+        <p class="lead">Gift cards from Salon Solo make great presents for loved ones and friends. Please call or stop in for more information.</p>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="sub-footer">
+  <div class="container-fluid">
+    <div class="col-md-12 text-center">
+      <small>&copy; <%= Time.now.strftime('%Y') %>. All Rights Reserved. | Salon Solo, LLC</small>
+
+    </div>
+
+
+  </div>
+
+
+</div>
     </div>
     <%= render "/refinery/javascripts" %>
   </body>
