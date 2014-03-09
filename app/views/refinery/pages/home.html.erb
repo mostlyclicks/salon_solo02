@@ -91,7 +91,7 @@
       <div class="row">
         <%#= @image_array.sample %>
             <% @services.each do |s| %>
-              <div class="col-md-4 col-sm-6 col-xs-12 service_buckets">
+              <div class="col-md-4 col-sm-6 col-xs-6 service_buckets">
 
                 <%= image_fu s.service_image, '150x150c', class: 'img-circle' %>
                 <h3><%= s.title %></h3> 
