@@ -21,7 +21,7 @@
   
       <div class="col-md-8 col-sm-6">
         <% @page.images.each_with_index do |image, index| %>
-        <%# bg_color = raw @page.caption_for_image_index(index) %>
+        <% bg_color = raw @page.caption_for_image_index(index) %>
 
         <% if @hero_image[:index]  == 0 %>
           <% bg_style = 'rgba(132,130,126, 1)' %>
@@ -43,8 +43,8 @@
           <style>
             #intro {
               background-image:url(<%= @hero_image[:image].url %>);
+              background-position-x:55%;
               background-position-y:50%;
-              background-position-x:50%;
               background-repeat: no-repeat;
               background-color:<%= bg_style %>;
             }
@@ -119,7 +119,7 @@
               </tr>
               <tr clas="first-row">
                 <td>Haircut</td>
-                <td>$34+</td>
+                <td>$33+</td>
               </tr>
               <tr>
                 <td>Children (12 &amp; younger)</td>
@@ -133,51 +133,15 @@
 
             <table class="table">
               <tr>
-              <th colspan="2">Nails</th>
-              </tr>
-              <tr clas="first-row">
-                <td>Manicure - 45 minutes</td>
-                <td>$20</td>
-              </tr>
-              <tr>
-                <td>Gel polish manicure - 1 hour</td>
-                <td>$30</td>
-              </tr>
-              <tr>
-                <td>Pedicure - 1 hour 15 min</td>
-                <td>$35</td>
-              </tr>
-              <tr>
-                <td>Full set gel (plain) 1 hour 15 min</td>
-                <td>$35</td>
-              </tr>
-              <tr>
-                <td>Full set gel (French) 1 hour 15 min</td>
-                <td>$40</td>
-              </tr>
-              <tr>
-                <td>Fill for gel set (plain) 1 hour 15 min</td>
-                <td>$30</td>
-              </tr>
-              <tr>
-                <td>Fill for gel set (French) 1 hour 15 min</td>
-                <td>$35</td>
-              </tr>
-            </table>
-          </div>
-
-
-
-
-          <div class="col-md-4">
-
-            <table class="table">
-              <tr>
               <th colspan="2">Color</th>
               </tr>
-              <tr clas="first-row">
+              <tr class="first-row">
                 <td>Color retouch</td>
                 <td>$70+</td>
+              </tr>
+              <tr>
+                <td>Cut &amp; Color</td>
+                <td>$104+</td>
               </tr>
               <tr>
                 <td>Highlights/Lowlights<br />
@@ -195,6 +159,110 @@
                 <td>Consultation only</td>
               </tr>
             </table>
+
+            <table class="table">
+              <tr>
+              <th colspan="2">Treatment/Add-Ons</th>
+              </tr>
+              <tr clas="first-row">
+                <td>Repairing treatment<br />
+                  <small>with service</small></td>
+                <td>$15</td>
+              </tr>
+              <tr>
+                <td>Clariflying treatment<br />
+                  <small>without service</small></td>
+                <td>$30</td>
+
+              </tr>
+              <tr>
+                <td>Shine treatment</td>
+                <td>$30</td>
+              </tr>
+              <tr>
+                <td>Blowdry</td>
+                <td>$25</td>
+              </tr>
+              <tr>
+                <td>Blowdry with hot tools</td>
+                <td>$35</td>
+              </tr>
+              <tr>
+                <td>Wax - 15 minutes</td>
+                <td>$15</td>
+              </tr>
+            </table>
+
+          </div>
+
+
+
+
+          <div class="col-md-4">
+             <table class="table">
+              <tr>
+              <th colspan="2">Nails</th>
+              </tr>
+              <tr clas="first-row">
+                <td>Spa pedicure - 60 minutes<br />
+                  <small>Proper grooming of nails and cuticles, exfoliation and callus treatment, personalized massage with hot towels, choice of nail polish</small>
+                </td>
+                <td>$35</td>
+              </tr>
+              <tr>
+                <td>Deluxe pedicure - 75 minutes<br />
+                  <small>Hot stone massage on your feet, finish w cooling mask and hot towels
+                  </small></td>
+                <td>$45</td>
+              </tr>
+              <tr>
+                <td>Gentlemen pedicure - 60 minutes<br />
+                  <small>Proper grooming of nails and cuticles, exfoliation and callus treatment, hot stone massage, finish w cooling mask, hot towels</small></td>
+                <td>$35</td>
+              </tr>
+              <tr>
+                <td>Express pedicure - 45 minutes<br />
+                  <small>Proper grooming nails and cuticles, exfoliation and callus treatment, choice of polish</small></td>
+                <td>$30</td>
+              </tr>
+              <tr>
+                <td>Spa manicure - 45 minutes</td>
+                <td>$25</td>
+              </tr>
+              <tr>
+                <td>Gel manicure - 60 minutes</td>
+                <td>$30</td>
+              </tr>
+              <tr>
+                <td>Gel nails enhancement:<br />
+                  Full set - 75 minutes<br />
+                  Fill - 60 minutes</td>
+                <td>&nbsp;<br />$55+<br />$30+</td>
+              </tr>
+              <tr>
+                <td>Polish change on nails - 15 minutes</td>
+                <td>$12</td>
+              </tr>
+              <tr>
+                <td>Polish change on toes - 15 minutes</td>
+                <td>$17</td>
+              </tr>
+              <tr>
+                <td>Nail art add on services</td>
+                <td>$5+</td>
+              </tr>
+              <tr>
+                <td>Nail repair</td>
+                <td>$5+</td>
+              </tr>              
+            </table>
+
+            
+
+            
+
+          </div>
+          <div class="col-md-4">
 
             <table class="table">
               <tr>
@@ -222,64 +290,57 @@
                 <td>$15</td>
               </tr>
             </table>
-
-          </div>
-          <div class="col-md-4">
-            <table class="table">
-              <tr>
-              <th colspan="2">Treatment/Add-Ons</th>
-              </tr>
-              <tr clas="first-row">
-                <td>Repairing treatment<br />
-                  <small>with service</small></td>
-                <td>$15</td>
-              </tr>
-              <tr>
-                <td>Clariflying treatment<br />
-                  <small>without service</small></td>
-                <td>$30</td>
-
-              </tr>
-              <tr>
-                <td>Shine treatment</td>
-                <td>$30</td>
-              </tr>
-                            <tr>
-                <td>Blowdry</td>
-                <td>$25</td>
-              </tr>
-                            <tr>
-                <td>Blowdry with hot tools</td>
-                <td>$35</td>
-              </tr>
-            </table>
+            
 
             <table class="table">
               <tr>
               <th colspan="2">Aesthetics</th>
               </tr>
               <tr class="first-row">
-                <td>Repairing treatment<br />
-                  <small>with service</small></td>
-                <td>$15</td>
+                <td>Osmosis consultation - 60 minutes</td>
+                <td>$30<br />
+                  <small>plus 20% off Osmosis products</small></td>
               </tr>
               <tr>
-                <td>Clariflying treatment<br />
-                  <small>without service</small></td>
-                <td>$30</td>
+                <td>Osmosis medi-spa - 90 minutes</td>
+                <td>$80</td>
 
               </tr>
               <tr>
-                <td>Shine treatment</td>
+                <td>Facial infusion - 60 minutes</td>
+                <td>$90</td>
+              </tr>
+              <tr>
+                <td>Brow wax - 15 minutes</td>
+                <td>$15</td>
+              </tr>
+              <tr>
+                <td>Lip wax - 15 minutes</td>
+                <td>$10</td>
+              </tr>
+              <tr>
+                <td>Bikini wax - 30 minutes</td>
                 <td>$30</td>
               </tr>
-                            <tr>
-                <td>Blowdry</td>
-                <td>$25</td>
+              <tr>
+                <td>Modified Brazilian wax - 45 minutes</td>
+                <td>$40</td>
               </tr>
-                            <tr>
-                <td>Blowdry with hot tools</td>
-                <td>$35</td>
+              <tr>
+                <td>Brazilian wax - 45 minutes</td>
+                <td>$45</td>
+              </tr>
+              <tr>
+                <td>Underarm - 15 minutes</td>
+                <td>$15</td>
+              </tr>
+              <tr>
+                <td>1/2 leg - 45 minutes</td>
+                <td>$40</td>
+              </tr>
+              <tr>
+                <td>Full leg - 60 minutes</td>
+                <td>$55</td>
               </tr>
             </table>
           </div>

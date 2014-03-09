@@ -36,4 +36,6 @@ Virq10Work::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = false
+  config.s3_backend = false
+
 end
