@@ -28,7 +28,7 @@ body {
 #intro {
   //background-position-x:100%;
   //background-position-y:50%;
-  
+
   
   font-family:$font-sans;
   h1 {
@@ -162,6 +162,7 @@ body {
   #table-section {border-top:1px dotted black;padding-top:20px;margin-top:-31px;}
   table {
     box-shadow:1px 1px 3px rgba(0,0,0,.2);
+    background-color:rgba(255,255,255,.7);
   }
   th {
     border-top:none !important;
@@ -207,6 +208,15 @@ p {
 //     width: 100% !important;
 //     height: 100% !important;
 // }
+
+#products {
+  background-color:#e1e1e1;
+  padding:20px 0;
+  img {
+    margin:0 auto;
+  }
+  border-top:1px solid rgba(255,255,255,.5);
+}
 
 
 #footer {

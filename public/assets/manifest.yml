@@ -19,6 +19,14 @@ chalkboard.psd: chalkboard-4434b34402e7eae71acab34741b433ff.psd
 chalkboard/index.psd: chalkboard-4434b34402e7eae71acab34741b433ff.psd
 hero.jpg: hero-bb2871e4c33f7b3a3fcbca2e302e85f0.jpg
 hero/index.jpg: hero-bb2871e4c33f7b3a3fcbca2e302e85f0.jpg
+logo-cnd.png: logo-cnd-1be3fcbaa02803c8107c6fa491666324.png
+logo-cnd/index.png: logo-cnd-1be3fcbaa02803c8107c6fa491666324.png
+logo-opi.png: logo-opi-975e0102f3b3344436062d3915341d1f.png
+logo-opi/index.png: logo-opi-975e0102f3b3344436062d3915341d1f.png
+logo-osmosis.png: logo-osmosis-53c5ce78e49ef23aa6a5b10a4699d449.png
+logo-osmosis/index.png: logo-osmosis-53c5ce78e49ef23aa6a5b10a4699d449.png
+logo-pureology.png: logo-pureology-38eb2bab649c0e0a59ab76b2321659dc.png
+logo-pureology/index.png: logo-pureology-38eb2bab649c0e0a59ab76b2321659dc.png
 logo.png: logo-ab8722f50e550d902aeb4676f1091cea.png
 logo/index.png: logo-ab8722f50e550d902aeb4676f1091cea.png
 mirror-bg-blue.jpg: mirror-bg-blue-beb786cfa60ba947414d02ebb995c1ff.jpg
@@ -55,8 +63,8 @@ application.js: application-04ca8c4ae7bb76188aa1dde7f3f48a80.js
 application/index.js: application-04ca8c4ae7bb76188aa1dde7f3f48a80.js
 Lorem ipsum dolor sit amet, consectetur adipisicin: Lorem ipsum dolor sit amet, consectetur
   adipisicin
-application.css: application-b03b6a4256d41b26aaf12f79e6b54d81.css
-application/index.css: application-b03b6a4256d41b26aaf12f79e6b54d81.css
+application.css: application-02ad7b9973457820b529ea6090d16782.css
+application/index.css: application-02ad7b9973457820b529ea6090d16782.css
 untitled: untitled
 favicon.ico: favicon-acec7f735fa1a67eaf836a34ad4e9bd3.ico
 favicon/index.ico: favicon-acec7f735fa1a67eaf836a34ad4e9bd3.ico
