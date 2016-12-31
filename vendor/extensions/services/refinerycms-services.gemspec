@@ -3,6 +3,7 @@
 Gem::Specification.new do |s|
   s.platform          = Gem::Platform::RUBY
   s.name              = 'refinerycms-services'
+  s.authors           = 'mC'
   s.version           = '1.0'
   s.description       = 'Ruby on Rails Services extension for Refinery CMS'
   s.date              = '2014-02-03'

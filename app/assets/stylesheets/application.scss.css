@@ -11,6 +11,7 @@
  *= require refinery/formatting
  *= require refinery/theme
  *= require bootstrap
+ *= responsive
  *= require_self
  *= require_tree .
  */
