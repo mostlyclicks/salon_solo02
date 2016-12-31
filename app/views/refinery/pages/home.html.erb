@@ -24,18 +24,22 @@
         <% bg_color = raw @page.caption_for_image_index(index) %>
 
         <% if @hero_image[:index]  == 0 %>
-          <% bg_style = 'rgba(132,130,126, 1)' %>><!-- gray -->
+        <%= @hero_image[:index] %>
+          <% bg_style = 'rgba(132,130,126, 1)' %><!-- gray -->
           <% @phone_style = 'rgba(132,130,126, .9)' %>
         <% elsif @hero_image[:index]  == 1 %>
+        <%= @hero_image[:index] %>
           <% bg_style = 'rgba(163,171,160, 1)' %><!-- green  Suzy-->
           <% @phone_style = 'rgba(163,171,160, .9)' %>
         <% elsif @hero_image[:index]  == 2 %>
+        <%= @hero_image[:index] %>
           <% bg_style = 'rgba(72,89,107, 1)' %>
           <% @phone_style = 'rgba(72,89,107, .9)' %><!-- blue Lori-->
         <%# elsif @hero_image[:index]  == 3 %>
           <%# bg_style = 'rgba(128,129,123, 1)' %><!-- dark gray -->
           <%# @phone_style = 'rgba(128,129,123, .9)' %>
         <% else %>
+        <%= @hero_image[:index] %>
           <% bg_style = 'rgba(149,153,165, 1)' %><!-- violet Joy-->
           <% @phone_style = 'rgba(149,153,165, .9)' %>
         <% end %>
