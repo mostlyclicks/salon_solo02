@@ -1,3 +1,5 @@
+<% content_for (:under_construction) do %>
+
 <div class="container" style="height:80vh;">
   <div class="row">
     <div class="col-md-4 col-md-offset-4 text-center">
@@ -8,9 +10,9 @@
   </div>
 </div>
 
+<% end %>
 
-
-<% content_for (:backup) do %>
+<%# content_for (:backup) do %>
 
 <style>
   .blue-brdr {border:1px solid blue;}
@@ -123,20 +125,22 @@
         <h1 style="">Menu of Services</h1>
 
         <div class="row" id="table-section">
-          <div class="col-md-4">
+          <div class="col-md-4 col-md-offset-2">
             <%= raw @page.content_for(:hair) %>
             <%= raw @page.content_for(:color) %>
+          </div>
+
+          <div class="col-md-4">
             <%= raw @page.content_for(:treatments) %>
-          </div>
 
-          <div class="col-md-4">
-            <%= raw @page.content_for(:nails) %>
-          </div>
-
-          <div class="col-md-4">
             <%= raw @page.content_for(:massage) %>
-            <%= raw @page.content_for(:aesthetics) %>   
+            <%#= raw @page.content_for(:nails) %>
           </div>
+
+          <!-- <div class="col-md-4">
+            
+            <%#= raw @page.content_for(:aesthetics) %>   
+          </div> -->
         </div>
 
       </div>
@@ -145,5 +149,5 @@
 </div>
 
 
-<% end %>
+<%# end %>
 
